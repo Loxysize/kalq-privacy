@@ -1,1 +1,205 @@
-Szia
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KalQ - Adatvedelmi iranyelvek</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      line-height: 1.6;
+      color: #222;
+    }
+    h1, h2 {
+      color: #0b3a66;
+    }
+    hr {
+      margin: 40px 0;
+    }
+  </style>
+</head>
+<body>
+
+<h1>KalQ - Adatvedelmi iranyelvek</h1>
+
+<p><strong>Utolso frissites:</strong> 2026.07.01.</p>
+
+<p>
+A KalQ alkalmazast Szikora Mario uzemelteti. Ez az adatvedelmi tajekoztato bemutatja,
+hogy az alkalmazas milyen adatokat kezel, milyen celbol, es hogyan vedjuk a felhasznalok adatait.
+</p>
+
+<h2>1. Az alkalmazas celja</h2>
+<p>
+A KalQ egy ajanlatkeszito alkalmazas, amely segit burkolasi es egyeb munkak arajanlatainak
+elkesziteseben, menteseben es kezeleseben.
+</p>
+
+<h2>2. Kezelt adatok</h2>
+<p>Az alkalmazas a hasznalat soran az alabbi adatokat kezelheti:</p>
+<ul>
+  <li>felhasznaloi fiok adatai, peldaul e-mail cim, nev vagy Google fiok azonosito,</li>
+  <li>az alkalmazasban letrehozott ajanlatok adatai,</li>
+  <li>ugyfeladatok, ha a felhasznalo ezeket rogziti az ajanlatokhoz,</li>
+  <li>elofizetesi allapot, peldaul Ultra elofizetes aktiv-e,</li>
+  <li>technikai adatok, peldaul hibak, osszeomlasok vagy mukodesi informaciok Firebase szolgaltatasokon keresztul.</li>
+</ul>
+
+<h2>3. Bejelentkezes</h2>
+<p>
+Az alkalmazas Firebase Authentication szolgaltatast hasznalhat a bejelentkezeshez.
+A felhasznalo Google fiokkal vagy mas tamogatott bejelentkezesi moddal lephet be.
+A bejelentkezesi adatokat a Firebase / Google kezeli.
+</p>
+
+<h2>4. Helyi es felho alapu adattarolas</h2>
+<p>
+Az alkalmazas adatokat tarolhat helyileg a felhasznalo eszkozen.
+Ultra elofizetes eseten felho alapu mentes is elerheto lehet, amely Firebase / Firestore
+szolgaltatason keresztul mukodik.
+</p>
+
+<p>
+A felho mentes celja, hogy a felhasznalo adatai biztonsagosabban megmaradjanak,
+illetve kesobb mas eszkozon is elerhetok legyenek.
+</p>
+
+<h2>5. Elofizetesek</h2>
+<p>
+Az Ultra elofizetes kezelese a Google Play rendszerén keresztul tortenik.
+A fizetesi adatokat nem a KalQ alkalmazas kezeli, hanem a Google Play.
+</p>
+
+<h2>6. Adatok megosztasa harmadik felekkel</h2>
+<p>
+A KalQ nem ad el szemelyes adatokat harmadik felnek.
+Az alkalmazas mukodesehez kulso szolgaltatok hasznalhatok, peldaul:
+</p>
+<ul>
+  <li>Google Firebase Authentication,</li>
+  <li>Firebase Firestore,</li>
+  <li>Google Play Billing,</li>
+  <li>Firebase Crashlytics vagy mas hibajelentesi szolgaltatas, ha az alkalmazasban aktiv.</li>
+</ul>
+
+<h2>7. Hirdetesek</h2>
+<p>
+Az alkalmazas jelenleg nem tartalmaz hirdeteseket.
+</p>
+
+<h2>8. Engedelyek</h2>
+<p>
+Az alkalmazas nem ker felesleges engedelyeket. Nem hasznal helymeghatarozast,
+kamerat vagy mikrofont, kiveve ha egy kesobbi funkcio ezt kifejezetten indokolja.
+</p>
+
+<h2>9. Adatok torlese</h2>
+<p>
+A felhasznalo kerheti a hozza kapcsolodo adatok torleset.
+Torlesi kerelmet az alabbi e-mail cimen lehet kuldeni:
+</p>
+
+<p><strong>E-mail:</strong> loxysize@gmail.com</p>
+
+<h2>10. Adatbiztonsag</h2>
+<p>
+Az adatok vedelme erdekeben az alkalmazas Google Firebase es Google Play szolgaltatasokat hasznal,
+amelyek biztonsagos adattarolasi es azonositasi megoldasokat nyujtanak.
+</p>
+
+<h2>11. Valtozasok</h2>
+<p>
+Az adatvedelmi iranyelvek idonkent modosulhatnak. A frissitett valtozat mindig ezen az oldalon lesz elerheto.
+</p>
+
+<hr>
+
+<h1>KalQ - Privacy Policy</h1>
+
+<p><strong>Last updated:</strong> 2026-07-01</p>
+
+<p>
+KalQ is operated by Szikora Mario. This Privacy Policy explains what data the application may collect,
+how it is used, and how user data is protected.
+</p>
+
+<h2>1. Purpose of the application</h2>
+<p>
+KalQ is a quotation management application designed to help users create, save and manage work quotations.
+</p>
+
+<h2>2. Data collected</h2>
+<p>The application may process the following data:</p>
+<ul>
+  <li>user account data, such as email address, name or Google account identifier,</li>
+  <li>quotation data created inside the application,</li>
+  <li>customer data entered by the user,</li>
+  <li>subscription status, such as whether Ultra subscription is active,</li>
+  <li>technical data, such as crashes, errors or diagnostic information through Firebase services.</li>
+</ul>
+
+<h2>3. Login</h2>
+<p>
+The application may use Firebase Authentication for user login.
+Users may sign in with a Google account or other supported authentication methods.
+Authentication data is handled by Firebase / Google.
+</p>
+
+<h2>4. Local and cloud storage</h2>
+<p>
+The application may store data locally on the user's device.
+With an Ultra subscription, cloud backup may be available through Firebase / Firestore.
+</p>
+
+<h2>5. Subscriptions</h2>
+<p>
+Ultra subscription is handled through Google Play. Payment information is not handled by KalQ directly,
+but by Google Play.
+</p>
+
+<h2>6. Sharing data with third parties</h2>
+<p>
+KalQ does not sell personal data to third parties.
+The application may use external service providers, including:
+</p>
+<ul>
+  <li>Google Firebase Authentication,</li>
+  <li>Firebase Firestore,</li>
+  <li>Google Play Billing,</li>
+  <li>Firebase Crashlytics or other crash reporting services, if enabled.</li>
+</ul>
+
+<h2>7. Ads</h2>
+<p>
+The application currently does not contain advertisements.
+</p>
+
+<h2>8. Permissions</h2>
+<p>
+The application does not request unnecessary permissions. It does not use location, camera or microphone
+unless a future feature specifically requires it.
+</p>
+
+<h2>9. Data deletion</h2>
+<p>
+Users may request deletion of their data by contacting:
+</p>
+
+<p><strong>Email:</strong> loxysize@gmail.com</p>
+
+<h2>10. Security</h2>
+<p>
+To protect user data, the application uses Google Firebase and Google Play services,
+which provide secure authentication and storage solutions.
+</p>
+
+<h2>11. Changes</h2>
+<p>
+This Privacy Policy may be updated from time to time. The latest version will always be available on this page.
+</p>
+
+</body>
+</html>
