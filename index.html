@@ -3,203 +3,340 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KalQ - Adatvedelmi iranyelvek</title>
+  <title>KalQ – Adatvédelmi irányelvek</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       max-width: 900px;
       margin: 40px auto;
       padding: 20px;
-      line-height: 1.6;
+      line-height: 1.7;
       color: #222;
+      background: #ffffff;
     }
     h1, h2 {
-      color: #0b3a66;
+      color: #0B3A66;
+    }
+    h1 {
+      border-bottom: 2px solid #0B3A66;
+      padding-bottom: 10px;
     }
     hr {
-      margin: 40px 0;
+      margin: 45px 0;
+      border: none;
+      border-top: 1px solid #ddd;
+    }
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+      color: #666;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
 
-<h1>KalQ - Adatvedelmi iranyelvek</h1>
+<h1>KalQ – Adatvédelmi irányelvek</h1>
 
-<p><strong>Utolso frissites:</strong> 2026.07.01.</p>
+<p><strong>Utolsó frissítés:</strong> 2026. július 1.</p>
 
 <p>
-A KalQ alkalmazast Szikora Mario uzemelteti. Ez az adatvedelmi tajekoztato bemutatja,
-hogy az alkalmazas milyen adatokat kezel, milyen celbol, es hogyan vedjuk a felhasznalok adatait.
+A KalQ alkalmazás fejlesztője és üzemeltetője: <strong>Szikora Márió</strong>.
+Az alkalmazás azonosítója: <strong>hu.kalq.ajanlatkeszito</strong>.
 </p>
 
-<h2>1. Az alkalmazas celja</h2>
 <p>
-A KalQ egy ajanlatkeszito alkalmazas, amely segit burkolasi es egyeb munkak arajanlatainak
-elkesziteseben, menteseben es kezeleseben.
+Jelen adatvédelmi tájékoztató bemutatja, hogy a KalQ milyen adatokat kezel,
+milyen célból kezeli azokat, és hogyan biztosítja a felhasználók adatainak védelmét.
 </p>
 
-<h2>2. Kezelt adatok</h2>
-<p>Az alkalmazas a hasznalat soran az alabbi adatokat kezelheti:</p>
+<h2>1. Az alkalmazás célja</h2>
+
+<p>
+A KalQ egy árajánlatkészítő alkalmazás, amely burkolók és más szakemberek számára
+segít árajánlatok készítésében, kezelésében, mentésében és későbbi visszakeresésében.
+</p>
+
+<h2>2. Bejelentkezés és felhasználói fiók</h2>
+
+<p>
+A KalQ használatához bejelentkezés szükséges. Az alkalmazás jelenleg
+Firebase Authentication szolgáltatást használ e-mail és jelszó alapú hitelesítéshez.
+</p>
+
+<p>
+A Google-fiókkal történő bejelentkezés fejlesztés alatt áll, és egy későbbi verzióban válhat elérhetővé.
+</p>
+
+<h2>3. Kezelt adatok</h2>
+
+<p>Az alkalmazás az alábbi adatokat kezelheti:</p>
+
 <ul>
-  <li>felhasznaloi fiok adatai, peldaul e-mail cim, nev vagy Google fiok azonosito,</li>
-  <li>az alkalmazasban letrehozott ajanlatok adatai,</li>
-  <li>ugyfeladatok, ha a felhasznalo ezeket rogziti az ajanlatokhoz,</li>
-  <li>elofizetesi allapot, peldaul Ultra elofizetes aktiv-e,</li>
-  <li>technikai adatok, peldaul hibak, osszeomlasok vagy mukodesi informaciok Firebase szolgaltatasokon keresztul.</li>
+  <li>felhasználói e-mail cím,</li>
+  <li>felhasználói azonosító,</li>
+  <li>előfizetési vagy jogosultsági állapot, például Free, Pro vagy Ultra,</li>
+  <li>az alkalmazásban létrehozott árajánlatok és mentések,</li>
+  <li>ügyféladatok, amelyeket a felhasználó saját maga rögzít,</li>
+  <li>alkalmazásbeállítások és biztonsági mentések.</li>
 </ul>
 
-<h2>3. Bejelentkezes</h2>
-<p>
-Az alkalmazas Firebase Authentication szolgaltatast hasznalhat a bejelentkezeshez.
-A felhasznalo Google fiokkal vagy mas tamogatott bejelentkezesi moddal lephet be.
-A bejelentkezesi adatokat a Firebase / Google kezeli.
-</p>
-
-<h2>4. Helyi es felho alapu adattarolas</h2>
-<p>
-Az alkalmazas adatokat tarolhat helyileg a felhasznalo eszkozen.
-Ultra elofizetes eseten felho alapu mentes is elerheto lehet, amely Firebase / Firestore
-szolgaltatason keresztul mukodik.
-</p>
+<h2>4. Helyi adattárolás</h2>
 
 <p>
-A felho mentes celja, hogy a felhasznalo adatai biztonsagosabban megmaradjanak,
-illetve kesobb mas eszkozon is elerhetok legyenek.
+Pro előfizetés esetén az adatok helyileg, a felhasználó eszközén kerülnek tárolásra.
+Ezeket az adatokat a KalQ nem tölti fel felhőbe.
 </p>
 
-<h2>5. Elofizetesek</h2>
+<h2>5. Felhőmentés Ultra előfizetéssel</h2>
+
 <p>
-Az Ultra elofizetes kezelese a Google Play rendszerén keresztul tortenik.
-A fizetesi adatokat nem a KalQ alkalmazas kezeli, hanem a Google Play.
+Ultra előfizetés esetén az alkalmazás felhőmentést biztosít Firebase Firestore használatával.
+A felhőben tárolt adatok a felhasználó saját fiókjához kapcsolódnak.
 </p>
 
-<h2>6. Adatok megosztasa harmadik felekkel</h2>
 <p>
-A KalQ nem ad el szemelyes adatokat harmadik felnek.
-Az alkalmazas mukodesehez kulso szolgaltatok hasznalhatok, peldaul:
+A felhőmentés célja, hogy a felhasználó adatai biztonságosabban megmaradjanak,
+és később visszaállíthatók legyenek.
 </p>
+
+<h2>6. Előfizetések és fizetés</h2>
+
+<p>
+Az előfizetések kezelése a Google Play rendszerén keresztül történik.
+A KalQ nem kezeli és nem tárolja a felhasználó bankkártyaadatait vagy fizetési adatait.
+</p>
+
+<h2>7. Google és Firebase szolgáltatások</h2>
+
+<p>Az alkalmazás az alábbi szolgáltatásokat használja:</p>
+
 <ul>
-  <li>Google Firebase Authentication,</li>
-  <li>Firebase Firestore,</li>
-  <li>Google Play Billing,</li>
-  <li>Firebase Crashlytics vagy mas hibajelentesi szolgaltatas, ha az alkalmazasban aktiv.</li>
+  <li>Firebase Authentication – bejelentkezés és felhasználói fiókok kezelése,</li>
+  <li>Firebase Firestore – Ultra előfizetéshez kapcsolódó felhőmentés,</li>
+  <li>Google Play Billing – előfizetések kezelése.</li>
 </ul>
 
-<h2>7. Hirdetesek</h2>
 <p>
-Az alkalmazas jelenleg nem tartalmaz hirdeteseket.
+Az alkalmazás jelenleg nem használ Firebase Analytics szolgáltatást az alkalmazáskódban.
 </p>
 
-<h2>8. Engedelyek</h2>
+<h2>8. Hirdetések</h2>
+
 <p>
-Az alkalmazas nem ker felesleges engedelyeket. Nem hasznal helymeghatarozast,
-kamerat vagy mikrofont, kiveve ha egy kesobbi funkcio ezt kifejezetten indokolja.
+A KalQ jelenleg nem tartalmaz hirdetéseket, és nem használ AdMob reklámszolgáltatást.
 </p>
 
-<h2>9. Adatok torlese</h2>
+<h2>9. Engedélyek</h2>
+
 <p>
-A felhasznalo kerheti a hozza kapcsolodo adatok torleset.
-Torlesi kerelmet az alabbi e-mail cimen lehet kuldeni:
+Az alkalmazás kizárólag a működéséhez szükséges engedélyeket használja.
+Nem használ helymeghatározást, kamerát vagy mikrofont, amennyiben ezt egy konkrét funkció nem indokolja.
 </p>
 
-<p><strong>E-mail:</strong> loxysize@gmail.com</p>
+<h2>10. Adatok megosztása harmadik felekkel</h2>
 
-<h2>10. Adatbiztonsag</h2>
 <p>
-Az adatok vedelme erdekeben az alkalmazas Google Firebase es Google Play szolgaltatasokat hasznal,
-amelyek biztonsagos adattarolasi es azonositasi megoldasokat nyujtanak.
+A KalQ nem ad el személyes adatokat harmadik félnek.
+Az adatok kizárólag az alkalmazás működéséhez szükséges Google/Firebase szolgáltatásokon keresztül kerülhetnek kezelésre.
 </p>
 
-<h2>11. Valtozasok</h2>
+<h2>11. Fiók és adatok törlése</h2>
+
 <p>
-Az adatvedelmi iranyelvek idonkent modosulhatnak. A frissitett valtozat mindig ezen az oldalon lesz elerheto.
+A felhasználó az alkalmazáson belül kezdeményezheti fiókjának törlését.
+A törlés során a KalQ a felhasználóhoz kapcsolódó adatokat véglegesen törli.
 </p>
+
+<p>A törlés kiterjedhet az alábbiakra:</p>
+
+<ul>
+  <li>Firebase Authentication felhasználói fiók,</li>
+  <li>Firebase Firestore alatt tárolt felhasználói dokumentum,</li>
+  <li>a felhasználóhoz tartozó alkollekciók, például biztonsági mentések,</li>
+  <li>a felhasználóhoz tartozó Storage mappa és fájlok, ha ilyenek létrejöttek,</li>
+  <li>az alkalmazás által helyileg tárolt adatok az eszközön.</li>
+</ul>
+
+<p>
+A fióktörlés végleges művelet, nem vonható vissza.
+</p>
+
+<p>
+Törlési vagy adatvédelmi kérdés esetén kapcsolat:
+<br>
+<strong>E-mail:</strong> loxysize@gmail.com
+</p>
+
+<h2>12. Adatbiztonság</h2>
+
+<p>
+A KalQ a felhasználói adatok védelme érdekében Google Firebase és Google Play szolgáltatásokat használ.
+A hozzáférés a felhasználói fiókhoz kötött.
+</p>
+
+<h2>13. Az adatvédelmi tájékoztató módosítása</h2>
+
+<p>
+Az adatvédelmi tájékoztató időről időre módosulhat.
+A legfrissebb verzió mindig ezen az oldalon érhető el.
+</p>
+
+<footer>
+  <strong>KalQ</strong><br>
+  Fejlesztő: Szikora Márió<br>
+  Kapcsolat: loxysize@gmail.com
+</footer>
 
 <hr>
 
-<h1>KalQ - Privacy Policy</h1>
+<h1>KalQ – Privacy Policy</h1>
 
-<p><strong>Last updated:</strong> 2026-07-01</p>
+<p><strong>Last updated:</strong> July 1, 2026</p>
 
 <p>
-KalQ is operated by Szikora Mario. This Privacy Policy explains what data the application may collect,
-how it is used, and how user data is protected.
+KalQ is developed and operated by <strong>Szikora Márió</strong>.
+Application ID: <strong>hu.kalq.ajanlatkeszito</strong>.
+</p>
+
+<p>
+This Privacy Policy explains what data KalQ processes, why it is processed,
+and how user data is protected.
 </p>
 
 <h2>1. Purpose of the application</h2>
+
 <p>
-KalQ is a quotation management application designed to help users create, save and manage work quotations.
+KalQ is a quotation management application designed to help tilers and other professionals
+create, manage, save and retrieve quotations.
 </p>
 
-<h2>2. Data collected</h2>
+<h2>2. Login and user account</h2>
+
+<p>
+Login is required to use KalQ. The application currently uses Firebase Authentication
+for email and password based authentication.
+</p>
+
+<p>
+Google account sign-in is under development and may become available in a future version.
+</p>
+
+<h2>3. Data processed</h2>
+
 <p>The application may process the following data:</p>
+
 <ul>
-  <li>user account data, such as email address, name or Google account identifier,</li>
-  <li>quotation data created inside the application,</li>
+  <li>user email address,</li>
+  <li>user identifier,</li>
+  <li>subscription or access status, such as Free, Pro or Ultra,</li>
+  <li>quotations and backups created in the application,</li>
   <li>customer data entered by the user,</li>
-  <li>subscription status, such as whether Ultra subscription is active,</li>
-  <li>technical data, such as crashes, errors or diagnostic information through Firebase services.</li>
+  <li>application settings and backup data.</li>
 </ul>
 
-<h2>3. Login</h2>
+<h2>4. Local storage</h2>
+
 <p>
-The application may use Firebase Authentication for user login.
-Users may sign in with a Google account or other supported authentication methods.
-Authentication data is handled by Firebase / Google.
+With a Pro subscription, data is stored locally on the user's device.
+This data is not uploaded to cloud storage by KalQ.
 </p>
 
-<h2>4. Local and cloud storage</h2>
+<h2>5. Cloud backup with Ultra subscription</h2>
+
 <p>
-The application may store data locally on the user's device.
-With an Ultra subscription, cloud backup may be available through Firebase / Firestore.
+With an Ultra subscription, KalQ provides cloud backup using Firebase Firestore.
+Cloud data is linked to the user's own account.
 </p>
 
-<h2>5. Subscriptions</h2>
+<h2>6. Subscriptions and payments</h2>
+
 <p>
-Ultra subscription is handled through Google Play. Payment information is not handled by KalQ directly,
-but by Google Play.
+Subscriptions are handled through Google Play.
+KalQ does not process or store bank card details or payment information.
 </p>
 
-<h2>6. Sharing data with third parties</h2>
+<h2>7. Google and Firebase services</h2>
+
+<p>The application uses the following services:</p>
+
+<ul>
+  <li>Firebase Authentication – login and user account management,</li>
+  <li>Firebase Firestore – cloud backup for Ultra subscription,</li>
+  <li>Google Play Billing – subscription management.</li>
+</ul>
+
+<p>
+The application currently does not use Firebase Analytics in the app code.
+</p>
+
+<h2>8. Advertisements</h2>
+
+<p>
+KalQ currently does not contain advertisements and does not use AdMob advertising services.
+</p>
+
+<h2>9. Permissions</h2>
+
+<p>
+The application only uses permissions required for its functionality.
+It does not use location, camera or microphone unless specifically required by a feature.
+</p>
+
+<h2>10. Sharing data with third parties</h2>
+
 <p>
 KalQ does not sell personal data to third parties.
-The application may use external service providers, including:
+Data may only be processed through Google/Firebase services required for the operation of the application.
 </p>
+
+<h2>11. Account and data deletion</h2>
+
+<p>
+The user can request account deletion from within the application.
+During deletion, KalQ permanently deletes the data associated with the user.
+</p>
+
+<p>Deletion may include:</p>
+
 <ul>
-  <li>Google Firebase Authentication,</li>
-  <li>Firebase Firestore,</li>
-  <li>Google Play Billing,</li>
-  <li>Firebase Crashlytics or other crash reporting services, if enabled.</li>
+  <li>Firebase Authentication user account,</li>
+  <li>user document stored in Firebase Firestore,</li>
+  <li>user subcollections, including backups,</li>
+  <li>user Storage folder and files, if such files exist,</li>
+  <li>locally stored app data on the device.</li>
 </ul>
 
-<h2>7. Ads</h2>
 <p>
-The application currently does not contain advertisements.
+Account deletion is permanent and cannot be undone.
 </p>
 
-<h2>8. Permissions</h2>
 <p>
-The application does not request unnecessary permissions. It does not use location, camera or microphone
-unless a future feature specifically requires it.
+For deletion or privacy-related questions, contact:
+<br>
+<strong>Email:</strong> loxysize@gmail.com
 </p>
 
-<h2>9. Data deletion</h2>
+<h2>12. Data security</h2>
+
 <p>
-Users may request deletion of their data by contacting:
+KalQ uses Google Firebase and Google Play services to help protect user data.
+Access is linked to the user's account.
 </p>
 
-<p><strong>Email:</strong> loxysize@gmail.com</p>
+<h2>13. Changes to this Privacy Policy</h2>
 
-<h2>10. Security</h2>
 <p>
-To protect user data, the application uses Google Firebase and Google Play services,
-which provide secure authentication and storage solutions.
+This Privacy Policy may be updated from time to time.
+The latest version will always be available on this page.
 </p>
 
-<h2>11. Changes</h2>
-<p>
-This Privacy Policy may be updated from time to time. The latest version will always be available on this page.
-</p>
+<footer>
+  <strong>KalQ</strong><br>
+  Developer: Szikora Márió<br>
+  Contact: loxysize@gmail.com
+</footer>
 
 </body>
 </html>
